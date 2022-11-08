@@ -28,7 +28,7 @@ let smpt_password = process.env.SMPT_PASSWORD || '---'
 
 
 let transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: "email",
     auth: {
         user: smpt_login,
         pass: smpt_password,
@@ -46,7 +46,7 @@ app.post("/sendMessage", async function (request, response) {
     await transporter.sendMail({
         from: name,
         to: "ursegovnikolaj@gmail.com",
-        subject: "ТТК",
+        subject: "TTK",
         html: `<h2>Сообщение с TTK</h2>
 <div><b>Имя: </b> <span>${name}</span></div>
 <div><b>Телефон: </b> <span>${phone}</span> </div>
