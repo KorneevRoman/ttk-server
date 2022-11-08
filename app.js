@@ -45,7 +45,7 @@ app.post("/sendMessage", async function (request, response) {
 
     await transporter.sendMail({
         from: name,
-        to: "ursegovnikolaj@gmail.com",
+        to: smpt_login,
         subject: "TTK",
         html: `<h2>Сообщение с TTK</h2>
 <div><b>Имя: </b> <span>${name}</span></div>
