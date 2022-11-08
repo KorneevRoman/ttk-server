@@ -28,7 +28,7 @@ let smpt_password = process.env.SMPT_PASSWORD || '---'
 
 
 let transporter = nodemailer.createTransport({
-    service: "email",
+    service: "gmail",
     auth: {
         user: smpt_login,
         pass: smpt_password,
